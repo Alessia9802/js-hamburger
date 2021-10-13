@@ -1,15 +1,13 @@
 /* mostrare / nascondere il menu principale in versione tablet o mobile */
 
-const openMenu = document.querySelector(".hamburger-menu");
-const closeMenu = document.querySelector(".close");
+const hamburgerMenuElement = document.querySelector(".hamburger-menu");
+const hamburgerIcon = document.querySelector(".header-right > a");
+const closeIcon = document.querySelector(".close");
 
-openMenu.addEventListener("click", show);
-closeMenu.addEventListener("click", close);
+hamburgerIcon.addEventListener("click", function () {
+  hamburgerMenuElement.style.display = "block";
+});
 
-function show() {
-  openMenu.style.display = "block";
-}
-
-function close() {
-  closeMenu.style.display = "none";
-}
+closeIcon.addEventListener("click", function () {
+  hamburgerMenuElement.style.display = "none";
+});
